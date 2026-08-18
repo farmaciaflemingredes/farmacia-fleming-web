@@ -110,13 +110,13 @@ export const branches: Branch[] = [
     closesAt: "02:00",
     closesNextDay: true,
     description:
-      "Sobre Av. Juan Domingo Perón, en la estación Shell de Alto La Loma, ideal para quienes se mueven en auto por la zona sur.",
+      "Sobre Av. Juan Domingo Perón, en la estación Shell de Alto La Loma, ideal para quienes se mueven en auto.",
   },
   {
     slug: "san-luis",
     name: "San Luis",
     fullName: "Farmacia Fleming - San Luis",
-    street: "Cerro Los Zorritos esq. Cuesta del Obispo, local 4 y 5 (Estación Shell)",
+    street: "Cerro Los Zorritos esq. Cuesta del Obispo, local 4 y 5 (Estación de Servicios Shell San Luis)",
     postalCode: "A4400AAA",
     city: "Salta",
     zone: "Barrio San Luis, Salta Capital",
@@ -131,7 +131,7 @@ export const branches: Branch[] = [
     closesAt: "00:00",
     closesNextDay: true,
     description:
-      "En la estación Shell de Cuesta del Obispo, atendiendo al barrio San Luis con envíos a domicilio gratis y buena disponibilidad de stock.",
+      "En la estación de servicios Shell San Luis, atendiendo al barrio San Luis con envíos a domicilio gratis y buena disponibilidad de stock.",
   },
 ];
 
