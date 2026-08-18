@@ -4,6 +4,7 @@ import Centro24hsBlock from "@/components/Centro24hsBlock";
 import InstagramSection from "@/components/InstagramSection";
 import SucursalesSection from "@/components/SucursalesSection";
 import MarcasSection from "@/components/MarcasSection";
+import DermaQuizTeaser from "@/components/DermaQuizTeaser";
 import SobreNosotrosSection from "@/components/SobreNosotrosSection";
 import { site } from "@/lib/site";
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Centro24hsBlock />
       <SucursalesSection />
       <MarcasSection />
+      <DermaQuizTeaser />
       <SobreNosotrosSection />
       <InstagramSection />
     </>

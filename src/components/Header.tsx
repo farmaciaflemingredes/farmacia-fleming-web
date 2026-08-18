@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/", label: "Inicio" },
   { href: "/sucursales", label: "Sucursales" },
   { href: "/marcas", label: "Marcas" },
+  { href: "/rutina-ideal", label: "Rutina ideal" },
   { href: "/#sobre-nosotros", label: "Sobre nosotros" },
 ];
 

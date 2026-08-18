@@ -66,6 +66,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/rutina-ideal" className="hover:text-verde-deep">
+                Rutina ideal
+              </Link>
+            </li>
+            <li>
               <Link href="/#sobre-nosotros" className="hover:text-verde-deep">
                 Sobre nosotros
               </Link>

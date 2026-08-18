@@ -38,13 +38,25 @@ export default function SobreNosotrosSection() {
           >
             Sobre Farmacia Fleming
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-ink/75">
-            Somos una farmacia salteña que crece sucursal a sucursal sin
-            perder lo que nos distingue: atención cercana y personalizada.
-            Acompañamos a nuestros vecinos en el cuidado diario de su salud y
-            su bienestar, con el mismo compromiso desde el primer mostrador
-            hasta el último local que abrimos.
-          </p>
+          <div className="mt-4 space-y-3 text-base leading-relaxed text-ink/75">
+            <p>Desde 1995, cuidamos la salud y el bienestar de los salteños.</p>
+            <p>
+              Somos una farmacia que crece junto a nuestra comunidad,
+              sucursal a sucursal, manteniendo siempre la cercanía y el
+              profesionalismo que nos caracteriza.
+            </p>
+            <p>
+              Más de 30 años acompañando a generaciones de salteños y
+              formando parte de la ciudad, incluso con aquel inolvidable
+              &ldquo;422 21 23&rdquo; que muchos todavía recuerdan de nuestro
+              jingle.
+            </p>
+            <p>
+              Hoy seguimos creciendo, pero nuestra forma de atender sigue
+              siendo la misma: cercana, humana y personalizada. Porque para
+              nosotros, estar cerca también es una forma de cuidar.
+            </p>
+          </div>
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">

@@ -13,6 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     { url: `${site.url}/marcas`, changeFrequency: "monthly", priority: 0.7 },
+    {
+      url: `${site.url}/rutina-ideal`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
   const branchRoutes: MetadataRoute.Sitemap = branches.map((b) => ({
