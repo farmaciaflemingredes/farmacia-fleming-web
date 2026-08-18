@@ -15,10 +15,16 @@ export default function BranchPickerSheet({
   mode,
   open,
   onClose,
+  whatsappMessage,
+  title: titleProp,
 }: {
   mode: PickerMode;
   open: boolean;
   onClose: () => void;
+  /** Mensaje pre-armado para el link de WhatsApp (solo aplica con mode="whatsapp"). */
+  whatsappMessage?: string;
+  /** Reemplaza el título por defecto del selector. */
+  title?: string;
 }) {
   const sheetRef = useRef<HTMLDivElement>(null);
 
@@ -38,12 +44,15 @@ export default function BranchPickerSheet({
   if (!open) return null;
 
   const title =
-    mode === "whatsapp"
+    titleProp ??
+    (mode === "whatsapp"
       ? "¿Con qué sucursal querés hablar?"
-      : "¿A qué sucursal querés ir?";
+      : "¿A qué sucursal querés ir?");
 
   function linkFor(b: Branch) {
-    return mode === "whatsapp" ? whatsappUrl(b) : mapsDirectionsUrl(b);
+    return mode === "whatsapp"
+      ? whatsappUrl(b, whatsappMessage)
+      : mapsDirectionsUrl(b);
   }
 
   return (

@@ -19,7 +19,7 @@ const puntos = [
   {
     icon: Users,
     title: "Atención personalizada",
-    text: "Un equipo que conoce a sus clientes por nombre y responde rápido, ya sea en el mostrador o por WhatsApp.",
+    text: "Un equipo preparado para brindarte una atención cercana y personalizada, tanto en el mostrador como por WhatsApp.",
   },
 ];
 

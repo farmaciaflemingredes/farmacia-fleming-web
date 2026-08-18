@@ -12,7 +12,7 @@ import {
   MapPin,
   CheckCircle2,
   Sun,
-  ArrowRight,
+  MessageCircle,
   RotateCcw,
 } from "lucide-react";
 import {
@@ -26,6 +26,7 @@ import {
   type EdadKey,
 } from "@/lib/dermaQuiz";
 import { brands } from "@/lib/brands";
+import BranchPickerSheet from "./BranchPickerSheet";
 
 const OPTION_ICON = {
   drop: Droplet,
@@ -107,12 +108,9 @@ export default function DermaQuiz() {
 function IntroScreen({ onStart }: { onStart: () => void }) {
   return (
     <div className="p-6 sm:p-8">
-      <h1 className="font-heading text-2xl font-bold leading-tight text-ink sm:text-3xl">
-        Descubrí tu{" "}
-        <span className="rounded-lg bg-verde-pale px-1.5 text-verde-deep">
-          rutina ideal
-        </span>
-      </h1>
+      <h2 className="font-heading text-xl font-semibold leading-tight text-ink sm:text-2xl">
+        ¿Cómo funciona?
+      </h2>
       <p className="mt-3 text-base leading-relaxed text-ink/70">
         Respondé 3 preguntas rápidas y te decimos qué línea dermocosmética es
         para tu piel, hoy.
@@ -126,8 +124,8 @@ function IntroScreen({ onStart }: { onStart: () => void }) {
         />
         <Feature
           icon={Sparkles}
-          title="100% personalizado"
-          text="Según tu piel y tu objetivo"
+          title="Según tu tipo de piel"
+          text="Orientativo, no reemplaza una consulta profesional"
         />
         <Feature
           icon={MapPin}
@@ -277,6 +275,10 @@ function ResultScreen({
   const principalSlug = MARCA_SLUG[r.principal.marcaKey];
   const principalBrand = brands.find((b) => b.slug === principalSlug);
   const productos = r.principal.productos ?? (r.principal.producto ? [r.principal.producto] : []);
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const whatsappMessage = `Hola! Hice el quiz de rutina ideal en la web y me recomendaron ${r.principal.marcaLabel}${
+    productos.length ? ` (${productos.join(", ")})` : ""
+  }. ¿Tienen disponibilidad?`;
 
   return (
     <div>
@@ -384,16 +386,23 @@ function ResultScreen({
         </div>
 
         <div className="mt-6 flex flex-col items-center gap-3">
-          <Link
-            href="/sucursales"
+          <button
+            type="button"
+            onClick={() => setPickerOpen(true)}
             className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-verde text-sm font-semibold text-blanco transition-colors hover:bg-verde-deep"
           >
-            Ver sucursales y contacto
-            <ArrowRight size={16} aria-hidden="true" />
-          </Link>
+            <MessageCircle size={16} aria-hidden="true" />
+            Consultar disponibilidad en mi Fleming
+          </button>
           <p className="text-xs text-gris">
-            Todas las direcciones y WhatsApp de Fleming
+            Elegís tu sucursal y te lleva directo a WhatsApp
           </p>
+          <Link
+            href="/sucursales"
+            className="text-sm font-medium text-verde-deep hover:underline"
+          >
+            Ver todas las sucursales
+          </Link>
           <button
             type="button"
             onClick={onRestart}
@@ -404,6 +413,14 @@ function ResultScreen({
           </button>
         </div>
       </div>
+
+      <BranchPickerSheet
+        mode="whatsapp"
+        open={pickerOpen}
+        onClose={() => setPickerOpen(false)}
+        whatsappMessage={whatsappMessage}
+        title="Elegí tu sucursal para consultar por WhatsApp"
+      />
     </div>
   );
 }
