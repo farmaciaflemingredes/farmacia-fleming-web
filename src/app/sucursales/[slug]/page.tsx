@@ -10,8 +10,10 @@ import {
   whatsappUrl,
 } from "@/lib/branches";
 import { site } from "@/lib/site";
+import { branchFaqs } from "@/lib/faq";
 import JsonLd from "@/components/JsonLd";
 import OpenStatusBadge from "@/components/OpenStatusBadge";
+import FAQAccordion from "@/components/FAQAccordion";
 
 export function generateStaticParams() {
   return branches.map((b) => ({ slug: b.slug }));
@@ -37,6 +39,7 @@ export async function generateMetadata({
       url: `${site.url}/sucursales/${branch.slug}`,
       title: `${branch.fullName} | ${site.name}`,
       description,
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     },
   };
 }
@@ -240,6 +243,26 @@ export default async function BranchPage({
             ))}
           </ul>
         </aside>
+      </section>
+
+      <section
+        aria-labelledby="faq-sucursal-heading"
+        className="border-t border-linea bg-bg py-10 sm:py-12"
+      >
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2
+            id="faq-sucursal-heading"
+            className="font-heading text-xl font-semibold text-ink sm:text-2xl"
+          >
+            Preguntas frecuentes de esta sucursal
+          </h2>
+          <div className="mt-5">
+            <FAQAccordion
+              items={branchFaqs(branch)}
+              idPrefix={`faq-${branch.slug}`}
+            />
+          </div>
+        </div>
       </section>
     </>
   );

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: `Marcas de dermocosmética en Farmacia Fleming, Salta`,
     description:
       "Las principales marcas de dermocosmética y cuidado personal disponibles en Farmacia Fleming, Salta.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

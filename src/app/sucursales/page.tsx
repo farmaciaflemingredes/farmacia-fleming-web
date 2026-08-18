@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: `Sucursales de ${site.name} en Salta`,
     description:
       "Direcciones, horarios, Google Maps y WhatsApp de cada sucursal de Farmacia Fleming en Salta.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

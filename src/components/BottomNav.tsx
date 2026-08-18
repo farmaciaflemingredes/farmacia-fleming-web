@@ -2,11 +2,22 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MapPin, MessageCircle, Navigation } from "lucide-react";
+import { getBranchBySlug, mapsDirectionsUrl, whatsappUrl } from "@/lib/branches";
 import BranchPickerSheet, { type PickerMode } from "./BranchPickerSheet";
 
 export default function BottomNav() {
   const [sheet, setSheet] = useState<PickerMode | null>(null);
+  const pathname = usePathname();
+
+  // El quiz ya tiene sus propios CTA: no lo tapamos con la barra fija.
+  if (pathname === "/rutina-ideal") return null;
+
+  // En la página de una sucursal puntual, ir directo a ESA sucursal en vez
+  // de volver a preguntar cuál (ya estamos ahí).
+  const slugMatch = pathname?.match(/^\/sucursales\/([^/]+)$/);
+  const currentBranch = slugMatch ? getBranchBySlug(slugMatch[1]) : undefined;
 
   return (
     <>
@@ -25,27 +36,55 @@ export default function BottomNav() {
             </span>
           </Link>
 
-          <button
-            type="button"
-            onClick={() => setSheet("whatsapp")}
-            className="flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl bg-verde px-1 py-1.5 text-blanco shadow-sm transition-transform active:scale-95"
-          >
-            <MessageCircle size={22} aria-hidden="true" />
-            <span className="text-[0.68rem] font-semibold leading-none">
-              WhatsApp
-            </span>
-          </button>
+          {currentBranch ? (
+            <a
+              href={whatsappUrl(currentBranch)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl bg-verde px-1 py-1.5 text-blanco shadow-sm transition-transform active:scale-95"
+            >
+              <MessageCircle size={22} aria-hidden="true" />
+              <span className="text-[0.68rem] font-semibold leading-none">
+                WhatsApp
+              </span>
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setSheet("whatsapp")}
+              className="flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl bg-verde px-1 py-1.5 text-blanco shadow-sm transition-transform active:scale-95"
+            >
+              <MessageCircle size={22} aria-hidden="true" />
+              <span className="text-[0.68rem] font-semibold leading-none">
+                WhatsApp
+              </span>
+            </button>
+          )}
 
-          <button
-            type="button"
-            onClick={() => setSheet("maps")}
-            className="flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 text-ink transition-colors active:bg-bg"
-          >
-            <Navigation size={20} aria-hidden="true" />
-            <span className="text-[0.68rem] font-medium leading-none">
-              Cómo llegar
-            </span>
-          </button>
+          {currentBranch ? (
+            <a
+              href={mapsDirectionsUrl(currentBranch)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 text-ink transition-colors active:bg-bg"
+            >
+              <Navigation size={20} aria-hidden="true" />
+              <span className="text-[0.68rem] font-medium leading-none">
+                Cómo llegar
+              </span>
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setSheet("maps")}
+              className="flex min-h-12 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 text-ink transition-colors active:bg-bg"
+            >
+              <Navigation size={20} aria-hidden="true" />
+              <span className="text-[0.68rem] font-medium leading-none">
+                Cómo llegar
+              </span>
+            </button>
+          )}
         </div>
       </nav>
 

@@ -77,6 +77,14 @@ export default function Footer() {
             </li>
             <li>
               <Link
+                href="/#preguntas-frecuentes"
+                className="hover:text-verde-deep"
+              >
+                Preguntas frecuentes
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/politica-de-privacidad"
                 className="hover:text-verde-deep"
               >

@@ -6,6 +6,7 @@ import SucursalesSection from "@/components/SucursalesSection";
 import MarcasSection from "@/components/MarcasSection";
 import DermaQuizTeaser from "@/components/DermaQuizTeaser";
 import SobreNosotrosSection from "@/components/SobreNosotrosSection";
+import FAQSection from "@/components/FAQSection";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     title: `${site.name} | Farmacia en Salta Capital y San Lorenzo`,
     description:
       "5 sucursales en Salta. Encontrá tu farmacia más cercana, cómo llegar y WhatsApp directo.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -30,6 +32,7 @@ export default function HomePage() {
       <MarcasSection />
       <DermaQuizTeaser />
       <SobreNosotrosSection />
+      <FAQSection />
       <InstagramSection />
     </>
   );

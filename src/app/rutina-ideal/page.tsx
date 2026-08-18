@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     title: `Descubrí tu rutina ideal | ${site.name}`,
     description:
       "Un quiz de 1 minuto para saber qué línea dermocosmética es para tu piel, con productos disponibles en Farmacia Fleming, Salta.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
