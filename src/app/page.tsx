@@ -12,13 +12,13 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Farmacia en Salta Capital y San Lorenzo",
   description:
-    "Farmacia Fleming: 5 sucursales en Salta (Centro, San Lorenzo, Ciudad Judicial, Alto La Loma y San Luis). Encontrá tu farmacia más cercana, mirá cómo llegar y escribinos por WhatsApp.",
+    "Farmacia Fleming: 4 sucursales en Salta (Centro, San Lorenzo, Ciudad Judicial y Alto La Loma). Encontrá tu farmacia más cercana, mirá cómo llegar y escribinos por WhatsApp.",
   alternates: { canonical: "/" },
   openGraph: {
     url: site.url,
     title: `${site.name} | Farmacia en Salta Capital y San Lorenzo`,
     description:
-      "5 sucursales en Salta. Encontrá tu farmacia más cercana, cómo llegar y WhatsApp directo.",
+      "4 sucursales en Salta. Encontrá tu farmacia más cercana, cómo llegar y WhatsApp directo.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };

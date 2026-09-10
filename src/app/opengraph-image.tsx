@@ -53,7 +53,7 @@ export default function OpengraphImage() {
             fontWeight: 700,
           }}
         >
-          5 sucursales en Salta Capital y San Lorenzo
+          4 sucursales en Salta Capital y San Lorenzo
         </div>
       </div>
     ),

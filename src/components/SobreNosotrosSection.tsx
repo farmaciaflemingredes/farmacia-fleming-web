@@ -4,7 +4,7 @@ const puntos = [
   {
     icon: MapPinned,
     title: "Cerca tuyo",
-    text: "Cinco sucursales distribuidas en Salta Capital y San Lorenzo, pensadas para que siempre tengas una farmacia Fleming a mano.",
+    text: "Cuatro sucursales distribuidas en Salta Capital y San Lorenzo, pensadas para que siempre tengas una farmacia Fleming a mano.",
   },
   {
     icon: Clock3,

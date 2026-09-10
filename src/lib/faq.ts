@@ -23,7 +23,7 @@ export const homeFaqs: FaqItem[] = [
   {
     question: "¿Cuántas sucursales tiene Farmacia Fleming en Salta?",
     answer:
-      "Tenemos 5 sucursales: Centro, San Lorenzo, Ciudad Judicial, Alto La Loma y San Luis, todas en Salta Capital y Villa San Lorenzo.",
+      "Tenemos 4 sucursales: Centro, San Lorenzo, Ciudad Judicial y Alto La Loma, todas en Salta Capital y Villa San Lorenzo.",
   },
   {
     question: "¿Cómo hago un pedido por WhatsApp?",

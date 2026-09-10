@@ -35,7 +35,7 @@ export default function SucursalesSection() {
               Nuestras sucursales
             </h2>
             <p className="mt-2.5 text-base leading-relaxed text-gris">
-              5 farmacias en Salta Capital y San Lorenzo. Elegí la más
+              4 farmacias en Salta Capital y San Lorenzo. Elegí la más
               cercana.
             </p>
           </div>

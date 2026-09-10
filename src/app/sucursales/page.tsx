@@ -6,7 +6,7 @@ import BranchCard from "@/components/BranchCard";
 export const metadata: Metadata = {
   title: "Sucursales en Salta",
   description:
-    "Las 5 sucursales de Farmacia Fleming en Salta: Centro, San Lorenzo, Ciudad Judicial, Alto La Loma y San Luis. Direcciones, horarios, cómo llegar y WhatsApp de cada una.",
+    "Las 4 sucursales de Farmacia Fleming en Salta: Centro, San Lorenzo, Ciudad Judicial y Alto La Loma. Direcciones, horarios, cómo llegar y WhatsApp de cada una.",
   alternates: { canonical: "/sucursales" },
   openGraph: {
     url: `${site.url}/sucursales`,
@@ -26,7 +26,7 @@ export default function SucursalesPage() {
             Sucursales de Farmacia Fleming en Salta
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink/75">
-            Tenemos 5 farmacias distribuidas en Salta Capital y San Lorenzo.
+            Tenemos 4 farmacias distribuidas en Salta Capital y San Lorenzo.
             Elegí la que te quede más cerca: mirá la dirección, el horario,
             abrí Google Maps o escribinos directo por WhatsApp.
           </p>

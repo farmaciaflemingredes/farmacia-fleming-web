@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="bg-verde-pale/50">
       <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6 sm:py-20">
         <span className="mb-5 inline-flex items-center gap-2 rounded-full bg-blanco px-3.5 py-1.5 text-xs font-medium uppercase tracking-wide text-verde-deep shadow-brand">
-          5 sucursales en Salta
+          4 sucursales en Salta
         </span>
 
         <h1 className="font-heading text-3xl font-bold leading-[1.15] text-ink sm:text-5xl sm:leading-[1.1]">

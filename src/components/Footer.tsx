@@ -13,7 +13,7 @@ export default function Footer() {
           <Logo />
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-gris">
             Farmacia en Salta con sucursales en Centro, San Lorenzo, Ciudad
-            Judicial, Alto La Loma y San Luis. Siempre cerca tuyo.
+            Judicial y Alto La Loma. Siempre cerca tuyo.
           </p>
           <div className="mt-5 flex items-center gap-3">
             <a

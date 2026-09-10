@@ -5,7 +5,7 @@ export const site = {
   shortName: "Fleming",
   tagline: "Siempre cerca tuyo",
   description:
-    "Farmacia Fleming es una cadena de farmacias en Salta Capital y San Lorenzo, con sucursales en Centro, Alto La Loma, San Lorenzo, San Luis y Ciudad Judicial. Envío a domicilio gratis, dermocosmética y atención los 365 días del año.",
+    "Farmacia Fleming es una cadena de farmacias en Salta Capital y San Lorenzo, con sucursales en Centro, Alto La Loma, San Lorenzo y Ciudad Judicial. Envío a domicilio gratis, dermocosmética y atención los 365 días del año.",
   // URL real en producción (Netlify). Cambiar acá el día que se conecte un
   // dominio propio (ej. www.farmaciafleming.com.ar).
   url: "https://farmaciaflemingsalta.netlify.app",
