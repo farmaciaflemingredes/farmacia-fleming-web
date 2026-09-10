@@ -12,16 +12,23 @@ function BrandLogo({
 }) {
   return (
     <div
-      className={`card-radius flex h-20 items-center justify-center border border-linea bg-blanco p-4 sm:h-24 ${className}`}
+      className={`card-radius flex h-20 flex-col items-center justify-center gap-1.5 border border-linea bg-blanco p-4 sm:h-24 ${className}`}
     >
       <Image
         src={`/logos/${brand.file}`}
         alt={`Logo de ${brand.name}, marca disponible en Farmacia Fleming Salta`}
         width={140}
         height={60}
-        className="h-auto max-h-11 w-auto max-w-full object-contain sm:max-h-14"
+        className={`h-auto w-auto max-w-full object-contain ${
+          brand.iconOnly
+            ? "max-h-7 sm:max-h-9"
+            : "max-h-11 sm:max-h-14"
+        }`}
         loading="lazy"
       />
+      {brand.iconOnly && (
+        <span className="text-xs font-medium text-gris">{brand.name}</span>
+      )}
     </div>
   );
 }

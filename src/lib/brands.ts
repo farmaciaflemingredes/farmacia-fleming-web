@@ -5,6 +5,10 @@ export type Brand = {
   name: string;
   slug: string;
   file: string; // nombre de archivo dentro de /public/logos
+  // true cuando el logo oficial de la marca es un ícono/símbolo sin texto
+  // (ej. Caviahue): en ese caso mostramos el nombre como caption aparte,
+  // porque el ícono solo no se lee como marca al lado de wordmarks.
+  iconOnly?: boolean;
 };
 
 export const brands: Brand[] = [
@@ -12,7 +16,7 @@ export const brands: Brand[] = [
   { name: "Avène", slug: "avene", file: "avene.png" },
   { name: "Bagóvit", slug: "bagovit", file: "bagovit.png" },
   { name: "Bioderma", slug: "bioderma", file: "bioderma.svg" },
-  { name: "Caviahue", slug: "caviahue", file: "caviahue.png" },
+  { name: "Caviahue", slug: "caviahue", file: "caviahue.png", iconOnly: true },
   { name: "CeraVe", slug: "cerave", file: "cerave.png" },
   { name: "Cetaphil", slug: "cetaphil", file: "cetaphil.png" },
   { name: "Cicatricure", slug: "cicatricure", file: "cicatricure.svg" },
