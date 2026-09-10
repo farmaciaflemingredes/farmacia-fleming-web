@@ -19,7 +19,7 @@ function BrandLogo({
         alt={`Logo de ${brand.name}, marca disponible en Farmacia Fleming Salta`}
         width={140}
         height={60}
-        className="h-auto max-h-9 w-auto max-w-full object-contain sm:max-h-11"
+        className="h-auto max-h-11 w-auto max-w-full object-contain sm:max-h-14"
         loading="lazy"
       />
     </div>
