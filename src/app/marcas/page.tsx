@@ -5,7 +5,7 @@ import MarcasSection from "@/components/MarcasSection";
 export const metadata: Metadata = {
   title: "Marcas de dermocosmética en Salta",
   description:
-    "Aveeno, Avène, Bagóvit, Bioderma, CeraVe, Cetaphil, Dermaglós, Eucerin, Gata Flora, ISDIN, La Roche-Posay, Neutrogena, Nivea, Pond's, Vichy, Valuge y Garnier: las marcas de dermocosmética y cuidado personal que encontrás en Farmacia Fleming, Salta.",
+    "Aveeno, Avène, Bagóvit, Bioderma, Caviahue, CeraVe, Cetaphil, Cicatricure, Dermaglós, Dove, Eucerin, Garnier, Gata Flora, ISDIN, La Roche-Posay, L'Oréal, Neutrogena, Nivea, Pond's, Valuge y Vichy: las marcas de dermocosmética y cuidado personal que encontrás en Farmacia Fleming, Salta.",
   alternates: { canonical: "/marcas" },
   openGraph: {
     url: `${site.url}/marcas`,

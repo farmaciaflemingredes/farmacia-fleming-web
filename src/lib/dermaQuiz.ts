@@ -73,8 +73,8 @@ export const OBJ_LABEL: Record<ObjetivoKey, string> = {
 };
 
 // Mapea la marca recomendada al slug real de /src/lib/brands.ts (para poder
-// mostrar el logo oficial). "Caviahue" no forma parte del catálogo de marcas
-// verificado de Fleming, así que esas recomendaciones quedan solo en texto.
+// mostrar el logo oficial cuando la marca es la recomendación "principal";
+// la "alternativa" siempre se muestra en texto, ver DermaQuiz.tsx).
 export const MARCA_SLUG: Record<string, string | undefined> = {
   cerave: "cerave",
   nivea: "nivea",
@@ -84,7 +84,7 @@ export const MARCA_SLUG: Record<string, string | undefined> = {
   avene: "avene",
   bioderma: "bioderma",
   dermaglos: "dermaglos",
-  caviahue: undefined,
+  caviahue: "caviahue",
   valuge: "valuge",
   garnier: "garnier",
   cetaphil: "cetaphil",
