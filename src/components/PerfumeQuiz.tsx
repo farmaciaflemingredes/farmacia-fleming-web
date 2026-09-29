@@ -295,6 +295,70 @@ function QuestionScreen({
   );
 }
 
+function BottleIcon({ color }: { color: string }) {
+  return (
+    <svg viewBox="0 0 64 96" width="52" height="78" fill="none" aria-hidden="true">
+      <rect
+        x="14"
+        y="30"
+        width="36"
+        height="58"
+        rx="7"
+        fill={color}
+        fillOpacity="0.16"
+        stroke={color}
+        strokeWidth="2.5"
+      />
+      <rect
+        x="24"
+        y="14"
+        width="16"
+        height="18"
+        rx="3"
+        fill={color}
+        fillOpacity="0.22"
+        stroke={color}
+        strokeWidth="2.5"
+      />
+      <rect x="20" y="6" width="24" height="10" rx="4" fill={color} />
+      <line
+        x1="14"
+        y1="54"
+        x2="50"
+        y2="54"
+        stroke={color}
+        strokeOpacity="0.45"
+        strokeWidth="1.5"
+      />
+    </svg>
+  );
+}
+
+function ProductVisual({ item }: { item: PerfumeItem }) {
+  return (
+    <div className="mb-4 flex justify-center">
+      <div className="grid h-40 w-32 shrink-0 place-items-center overflow-hidden rounded-2xl border border-linea bg-blanco shadow-sm">
+        {item.imagen ? (
+          <Image
+            src={item.imagen}
+            alt={`${item.nombre} de ${item.marca}`}
+            width={200}
+            height={280}
+            className="h-full w-full object-contain p-2"
+          />
+        ) : (
+          <div
+            className="grid h-full w-full place-items-center"
+            style={{ background: `${FAMILIA_COLOR[item.familia]}14` }}
+          >
+            <BottleIcon color={FAMILIA_COLOR[item.familia]} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function AvailabilityChips({ item }: { item: PerfumeItem }) {
   if (item.sucursales.length === 0) {
     return (
@@ -393,13 +457,17 @@ function ResultScreen({
       />
 
       <div className="p-6 sm:p-8">
-        <p className="text-xs font-medium uppercase tracking-wide text-gris">
+        <ProductVisual item={r.principal} />
+
+        <p className="text-center text-xs font-medium uppercase tracking-wide text-gris sm:text-left">
           Perfume recomendado
         </p>
-        <h3 className="mt-2 font-heading text-xl font-semibold text-ink">
+        <h3 className="mt-2 text-center font-heading text-xl font-semibold text-ink sm:text-left">
           {r.principal.nombre}
         </h3>
-        <p className="text-sm text-gris">{r.principal.marca}</p>
+        <p className="text-center text-sm text-gris sm:text-left">
+          {r.principal.marca}
+        </p>
 
         <p className="mt-4 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-gris">
           <MapPin size={13} aria-hidden="true" />

@@ -32,6 +32,10 @@ export type PerfumeItem = {
   familia: Familia;
   intensidad: Intensidad;
   sucursales: StockCode[];
+  // Foto oficial verificada (sitio de la marca o retailer oficial), en
+  // /public/perfumes/. Si no está, el resultado muestra un ícono de frasco
+  // genérico coloreado según la familia (ver ProductVisual en PerfumeQuiz.tsx).
+  imagen?: string;
 };
 
 export const CATALOGO: PerfumeItem[] = [
