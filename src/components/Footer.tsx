@@ -71,6 +71,11 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/perfume-ideal" className="hover:text-verde-deep">
+                Perfume ideal
+              </Link>
+            </li>
+            <li>
               <Link href="/#sobre-nosotros" className="hover:text-verde-deep">
                 Sobre nosotros
               </Link>

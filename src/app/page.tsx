@@ -5,6 +5,7 @@ import InstagramSection from "@/components/InstagramSection";
 import SucursalesSection from "@/components/SucursalesSection";
 import MarcasSection from "@/components/MarcasSection";
 import DermaQuizTeaser from "@/components/DermaQuizTeaser";
+import PerfumeQuizTeaser from "@/components/PerfumeQuizTeaser";
 import SobreNosotrosSection from "@/components/SobreNosotrosSection";
 import FAQSection from "@/components/FAQSection";
 import { site } from "@/lib/site";
@@ -31,6 +32,7 @@ export default function HomePage() {
       <SucursalesSection />
       <MarcasSection />
       <DermaQuizTeaser />
+      <PerfumeQuizTeaser />
       <SobreNosotrosSection />
       <FAQSection />
       <InstagramSection />

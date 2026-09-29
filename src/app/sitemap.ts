@@ -18,6 +18,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${site.url}/perfume-ideal`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 
   const branchRoutes: MetadataRoute.Sitemap = branches.map((b) => ({

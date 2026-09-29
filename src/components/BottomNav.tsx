@@ -11,8 +11,8 @@ export default function BottomNav() {
   const [sheet, setSheet] = useState<PickerMode | null>(null);
   const pathname = usePathname();
 
-  // El quiz ya tiene sus propios CTA: no lo tapamos con la barra fija.
-  if (pathname === "/rutina-ideal") return null;
+  // Los quizzes ya tienen sus propios CTA: no los tapamos con la barra fija.
+  if (pathname === "/rutina-ideal" || pathname === "/perfume-ideal") return null;
 
   // En la página de una sucursal puntual, ir directo a ESA sucursal en vez
   // de volver a preguntar cuál (ya estamos ahí).

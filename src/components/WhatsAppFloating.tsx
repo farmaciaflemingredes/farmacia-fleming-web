@@ -11,8 +11,8 @@ export default function WhatsAppFloating() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  // El quiz ya tiene sus propios CTA: no lo tapamos con el botón flotante.
-  if (pathname === "/rutina-ideal") return null;
+  // Los quizzes ya tienen sus propios CTA: no los tapamos con el botón flotante.
+  if (pathname === "/rutina-ideal" || pathname === "/perfume-ideal") return null;
 
   // En la página de una sucursal puntual, ir directo a ESA sucursal.
   const slugMatch = pathname?.match(/^\/sucursales\/([^/]+)$/);

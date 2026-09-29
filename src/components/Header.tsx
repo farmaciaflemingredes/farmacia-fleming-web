@@ -11,6 +11,7 @@ const navLinks = [
   { href: "/sucursales", label: "Sucursales" },
   { href: "/marcas", label: "Marcas" },
   { href: "/rutina-ideal", label: "Rutina ideal" },
+  { href: "/perfume-ideal", label: "Perfume ideal" },
   { href: "/#sobre-nosotros", label: "Sobre nosotros" },
 ];
 
