@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Montserrat, DM_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -81,6 +82,20 @@ export default function RootLayout({
 
   return (
     <html lang="es-AR" className={`${montserrat.variable} ${dmSans.variable}`}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YSL3EV9L3C"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YSL3EV9L3C');
+          `}
+        </Script>
+      </head>
       <body className="flex min-h-screen flex-col antialiased">
         <JsonLd data={organizationJsonLd} />
         <JsonLd
